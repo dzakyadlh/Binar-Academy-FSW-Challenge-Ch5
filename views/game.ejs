@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/1dbdd8f650.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/style/game_style.css">
+        <title>Rock Paper Scissors</title>
+        <link rel="icon" type="image/x-icon" href="../assets/homepage/icon.ico">
+    </head>
+    <body>
+        <div class="container--full-view-port d-flex justify-content-center align-items-center">
+            <div class="container--miniNav d-flex align-self-start">
+                <a href="/home"><i class="fa-solid fa-chevron-left"></i></a>
+                <img src="../assets/game/logo.png">
+                <p class="align-self-center">ROCK PAPER SCISSORS</p>
+            </div>
+            <div class="container d-flex flex-column justify-content-center align-items-center">
+                <p>PLAYER 1</p>
+                <a id="rock" onclick="roshambo(1)"><img src="../assets/game/batu.png"></a>
+                <a id="paper" onclick="roshambo(2)"><img src="../assets/game/kertas.png"></a>
+                <a id="scissor" onclick="roshambo(3)"><img src="../assets/game/gunting.png"></a>
+            </div>
+            <div class="container d-flex flex-column justify-content-center align-items-center">
+                <h1 id="vs">VS</h1>
+                <div id="stats" class="container--status d-flex justify-content-center align-items-center"></div>
+                <a id="refresh" onclick="refresh()"><img src="../assets/game/refresh.png"></a>
+            </div>
+            <div class="container d-flex flex-column justify-content-center align-items-center">
+                <p>COM</p>
+                <a id="com-rock"><img src="../assets/game/batu.png"></a>
+                <a id="com-paper"><img src="../assets/game/kertas.png"></a>
+                <a id="com-scissor"><img src="../assets/game/gunting.png"></a>
+            </div>
+        </div>
+        <script src="../services/game.js"></script>
+    </body>
+</html>

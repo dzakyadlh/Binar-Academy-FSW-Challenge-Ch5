@@ -1,0 +1,29 @@
+body {
+    background-color: #121212;
+    font-family: Poppins, sans-serif;
+}
+
+.container {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: 50px;
+}
+
+h1 {
+    color: goldenrod;
+    font-weight: bold;
+    font-size: 100px;
+}
+
+p {
+    color: whitesmoke;
+}
+
+@media (max-width: 767px){
+    .container {
+        width: 100%;
+        margin: 50px 10px;
+    }
+}

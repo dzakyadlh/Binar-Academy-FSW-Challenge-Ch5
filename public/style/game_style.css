@@ -1,0 +1,188 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: Poppins, sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*  */
+
+
+body {
+    color: black;
+    background-color: rgb(214, 174, 101) ;
+}
+.container--full-view-port {
+    height: 100vh;
+}
+
+/* Mini Navigation Bar */
+.container--miniNav {
+    width: 40vw;
+    height: 50px;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+}
+
+.container--miniNav i {
+    color: brown;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.container--miniNav i:hover {
+    cursor: pointer;
+}
+
+.container--miniNav img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.container--miniNav p {
+    color: rgb(243, 179, 16);
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 2px black;
+}
+
+/* Main Content */
+.container {
+    width: 20vw;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container h1 {
+    color: red;
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.container p {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.container a {
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    border-radius: 10%;
+    padding: auto;
+}
+
+.container img {
+    width: 90px;
+    height: 90px;
+    margin: 20px 0;
+}
+
+#rock:hover, #paper:hover, #scissor:hover {
+    cursor: pointer;
+}
+
+#rock:hover img, #paper:hover img, #scissor:hover img {
+    width: 100px;
+    height: 100px;
+    rotate: 30deg;
+    transition: 0.7s;
+}
+
+#refresh {
+    position: absolute;
+    bottom: 10%;
+    padding: 10px;
+}
+
+#refresh:hover {
+    cursor: pointer;
+}
+
+#refresh img {
+    width: 50px;
+    height: 50px;
+}
+
+.container--status {
+    opacity: 0;
+    width: 160px;
+    height: 90px;
+    transform: rotate(330deg);
+    background-color: rgb(59, 196, 59);
+    position: absolute;
+}
+
+#statsText{
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+}
+
+@media (max-width: 767px){
+    .container--miniNav {
+        width: 100vw;
+    }
+    .container {
+        width: 33vw;
+    }
+    .container h1 {
+        font-size: 40px;
+    }
+    .container p {
+        font-size: 20px;
+    }
+    .container img {
+        width: 80px;
+        height: 80px;
+    }
+    #refresh a{
+        bottom: 50%;
+    }
+    .container--status {
+        width: 100px;
+        height: 60px;
+    }
+
+}

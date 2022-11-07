@@ -1,0 +1,75 @@
+body {
+    background-color: #121212;
+    font-family: Poppins, sans-serif;
+}
+
+.container--full-view-port {
+    height: 100vh;
+}
+
+.container {
+    width: 400px;
+    border: 1px solid goldenrod;
+    padding: 20px;
+    height: 500px;
+    box-shadow: 0 0 10px goldenrod;
+}
+
+h1 {
+    color: goldenrod;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.form-floating{
+    color: goldenrod;
+}
+
+.container input {
+    margin: 10px 0;
+    width: 300px;
+    color: goldenrod;
+    background-color: #121212;
+}
+
+.container input:focus {
+    color: goldenrod;
+    background-color: #121212;
+}
+
+label {
+    font-size: 15px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    color: black;
+    background-color: goldenrod;
+    width: 300px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover {
+    background-color: rgb(219, 173, 57);
+    box-shadow: 0 0 5px gold;
+}
+
+#incorrect {
+    color: red;
+    font-size: 10px;
+    position: relative;
+    top: 5%;
+}
+
+@media (max-width: 767px){
+    .container {
+        width: 90%;
+        border: none;
+        box-shadow: none;
+    }
+}

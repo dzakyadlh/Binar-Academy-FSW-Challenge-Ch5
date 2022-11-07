@@ -1,0 +1,666 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+
+
+.container--full-view-port {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+    margin: 0;
+}
+
+/*Navigation Bar*/
+.firstPage .nav {
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+}
+
+.firstPage .nav-link {
+    color: white;
+    padding: 3vh 1.5vw;
+    font-size: 13px;
+}
+
+.firstPage .nav-link:hover {
+    color: goldenrod;
+}
+
+.firstPage .navlogo {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 2.8vh 2vw;
+    margin: 0 3vw 0 2vw;
+}
+
+.firstPage .navlast {
+    margin-right: 4vw;
+}
+
+
+/*First Page*/
+.firstPage {
+    background-image: url("../assets/homepage/main-bg.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.firstPage .container {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.mainscreen {
+    color: white;
+}
+
+.mainscreen div {
+    margin: 4vh 0;
+}
+
+.mainscreen h1 {
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 0 1px 5px black;
+}
+
+.mainscreen p {
+    font-size: 14px;
+    text-shadow: 0 1px 5px black;
+}
+
+.playgame {
+    width: 15vw;
+    padding: 2vh 2vw;
+    color: black;
+    background-color: goldenrod;
+    font-weight: bold;
+    box-shadow: 0 1px 5px 1px black;
+    font-size: 14px;
+}
+
+.playgame:disabled {
+    background-color: goldenrod;
+    color: black;
+}
+
+.nextBtn a{
+    color: white;
+    position: absolute;
+    left: 50%;
+    bottom: 2vh;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
+.nextBtn img {
+    width: 20px;
+}
+
+.nextBtn p {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    left: 50%;
+    bottom: 5vh;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
+.nextBtn:hover a{
+    cursor: pointer;
+    bottom: 1vh;
+    transition: 0.5s;
+}
+
+.nextBtn:hover p {
+    cursor: pointer;
+    bottom: 4vh;
+    transition: 0.5s;
+}
+
+@media (max-width: 767px) {
+    .firstPage .nav-link {
+        font-size: 8px;
+    }
+
+    .mainscreen h1 {
+        font-size: 25px;
+    }
+
+    .mainscreen p {
+        font-size: 10px;
+    }
+    
+    .mainscreen div {
+        margin: 3vh 0;
+    }
+
+    .playgame {
+        font-size: 8px;
+        width: 20vw;
+        padding: 8px;
+    }
+}
+
+/*Second Page*/
+.secondPage {
+    color: white;
+    background-image: url("../assets/homepage/the-games-bg.jpg");
+}
+
+.secondPage h1 {
+    font-size: 50px;
+}
+
+.secondPage .headings {
+    margin-top: 16vh;
+    margin-right: 1vw;
+    align-self: start;
+}
+
+.container--slider {
+    width: 60vw;
+    height: 28vw;
+    margin: 0;
+    padding: 0;
+}
+
+.btnRight img, .btnLeft img{
+    color: rgb(255,255,255);
+    width: 1vw;
+}
+
+.img1, .container--overlay {
+    width: 50vw;
+    height: 28vw;
+}
+
+.circles {
+    position: absolute;
+    z-index: 10;
+    margin: 0 2vw;
+}
+
+.circle {
+    margin: 2vh 2vw;
+    width: 1vw;
+}
+
+@media (max-width: 768px) {
+    .secondPage {
+        flex-direction: column;
+    }
+    .secondPage .headings {
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        margin: 0;
+    }
+    .btnLeft, .btnRight, .col-1 {
+        display: none !important;
+    }
+    .container--slider {
+        width: 70vw;
+    }
+    .img1, .container--overlay {
+        margin: 4vh auto;
+        width: 70vw;
+        height: 38vw;
+    }
+}
+
+
+/*Third Page*/
+.thirdPage {
+    background-image: url("../assets/homepage/features.jpg");
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    align-items: end;
+    text-shadow: 0 0 4px black;
+}
+
+.thirdPage .container {
+    width: 40vw;
+    margin: 20px;
+}
+
+.thirdPage p {
+    font-size: 15px;
+}
+
+.thirdPage h1 {
+    font-size: 60px;
+    margin: 10px 0;
+}
+
+.thirdPage .card {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.thirdPage .card-body {
+    padding: 0 0 4vh 40px;
+}
+
+#card1-body {
+    border-left: 3px solid white;
+}
+
+.thirdPage .card h1 {
+    margin: 0 !important;
+    font-size: 30px;
+    color: goldenrod;
+}
+
+.thirdPage .card p {
+    font-size: 14px;
+}
+
+.thirdPage .card img {
+    margin: 0;
+    position: absolute;
+    left: -7px;
+}
+
+@media (max-width: 768px) {
+    .thirdPage .container {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .thirdPage .card {
+        width: 80%;
+    }
+
+    .thirdPage .card h1  {
+        font-size: 20px;
+    }
+
+    .thirdPage .card p {
+        font-size: 12px;
+    }
+}
+
+
+/*Fourth Page*/
+.fourthPage {
+    background-image: url("../assets/homepage/requirements.png");
+    color: white;
+    align-items: start;
+}
+.fourthPage .container {
+    width: 50%;
+    margin: 2vh 10vw;
+}
+
+.fourthPage p {
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 5px 5px black;
+}
+
+.smallNote h6 {
+    font-size: 10px;
+}
+
+.sysReq .col {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px;
+}
+
+.sysReq h2 {
+    color: goldenrod;
+    font-size: 25px;
+    margin: 1vh 0;
+}
+
+.sysReq p {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .fourthPage {
+        align-items: center;
+    }
+    .fourthPage .headings {
+        align-items: center;
+    }
+
+    .fourthPage p {
+        font-size: 30px;
+    }
+
+    .fourthPage h6 {
+        display: none;
+    }
+
+    .sysReq h2 {
+        font-size: 15px;
+    }
+
+    .sysReq p {
+        font-size: 10px;
+    }
+}
+
+
+/* Fifth Page */
+.fifthPage {
+    background-image: url("../assets/homepage/top-score-bg.png");
+    background-color: #000000;
+    color: white;
+}
+
+.fifthPage .container {
+    margin: 0;
+    width: 40%;
+}
+
+.fifthPage h1, .fifthPage p, .fifthPage a {
+    margin: 2vh 1vw;
+}
+
+.fifthPage h1 {
+    font-size: 50px;
+}
+
+.card {
+    width: 25vw;
+    background-color: #121212;
+    margin: 1vw;
+    padding: 0.5vw;
+}
+
+.pp img{
+    border-radius: 50%;
+    width: 3vw;
+    height: 3vw;
+}
+
+.card h2 {
+    margin-left: 1vw;
+    font-size: 18px;
+    color: goldenrod;
+}
+
+.card h3 {
+    margin-left: 1vw;
+    font-size: 16px;
+    color: gray;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 0.7vw 0;
+}
+
+.card h6 {
+    color: gray;
+    font-size: 10px;
+}
+
+.card .row, .card .col {
+    padding: 0;
+}
+
+.twitterIcon img{
+    width: 1vw;
+}
+
+@media (max-width: 767px) {
+    .fifthPage h1 {
+        font-size: 22px;
+    }
+
+    .fifthPage p {
+        font-size: 12px;
+    }
+
+    .card h2 {
+        font-size: 8px;
+    }
+
+    .card h3 {
+        font-size: 7px;
+    }
+
+    .card p {
+        font-size: 6px;
+    }
+
+    .card h6 {
+        font-size: 5px;
+    }
+}
+
+
+/* Sixth Page */
+.sixthPage {
+    background-image: url("../assets/homepage/newsletter.png");
+    color: white;
+    justify-content: center;
+}
+
+.sixthPage .container, .sixthPage .container--skull {
+    width: 40vw;
+    margin: 2vh 0;
+}
+
+.sixthPage .container--skull img {
+    width: 20vw;
+    height: 65vh;
+}
+
+.sixthPage h1 {
+    font-size: 60px;
+    margin: 2vh 0;
+}
+
+.sixthPage h2 {
+    font-size: 30px;
+}
+
+.sixthPage p {
+    font-size: 18px;
+}
+
+.form-floating {
+    width: 20vw;
+}
+
+.sixthPage input {
+    padding: 2vh 1vw;
+    color: goldenrod;
+    background-color: #252424;
+    border: none;
+    font-size: 18px;
+}
+
+.sixthPage label {
+    padding: 1vw;
+    font-size: 15px;
+}
+
+.sixthPage input:focus {
+    background-color: #252424;
+    color: goldenrod;
+}
+
+.sixthPage .container--footNav {
+    width: 80vw;
+}
+
+.sixthPage .nav {
+    width: 100%;
+}
+
+.sixthPage .nav-link {
+    color: white;
+    padding: 2vh 1.5vw 1vh 1.5vw;
+    font-size: 12px;
+}
+
+.sixthPage .nav-link:hover {
+    color: goldenrod;
+}
+
+.sixthPage .socialMedia {
+    margin: 0 1vw 3vh 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.sixthPage .container--footer {
+    border-top: 1px solid gray;
+    width: 80vw;
+    margin-bottom: 8vh;
+}
+
+.container--footer p {
+    color: gray;
+    font-size: 12px;
+    margin-top: 3vh;
+}
+
+.container--footer .nav {
+    position: relative;
+    width: fit-content;
+}
+
+.container--footer .nav-link {
+    margin-top: 3vh;
+    padding: 0 0.2vw;
+}
+
+@media (max-width: 767px) {
+    .sixthPage {
+        justify-content: start;
+    }
+
+    .sixthPage .container {
+        width: 100%;
+    }
+
+    .container--skull {
+        display: none !important;
+    }
+
+    .sixthPage h1 {
+        font-size: 40px;
+    }
+
+    .sixthPage h2 {
+        font-size: 20px;
+    }
+
+    .sixthPage p {
+        font-size: 13px;
+    }
+
+    .form-floating {
+        margin: 0;
+        padding: 0;
+        width: 50vw;
+    }
+    .sixthPage input {
+        padding: 10px !important;
+        font-size: 12px;
+    }
+    
+    .sixthPage label {
+        font-size: 12px;
+    }
+
+    .sixthPage .playgame {
+        font-size: 12px;
+        width: 30vw;
+        padding: 10px 10px;
+        margin: 1vh;
+    }
+
+    .sixthPage .container--footNav {
+        display: none !important;
+    }
+
+    .container--footer {
+        width: 80%;
+        margin: auto;
+    }
+
+    .container--footer p {
+        font-size: 10px;
+    }
+
+    .container--footer .nav {
+        margin-left: 20vw;
+    }
+
+    .container--footer .nav-link {
+        font-size: 10px;
+    }
+}

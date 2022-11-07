@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="/style/homepage_style.css">
+        <script src="https://kit.fontawesome.com/1dbdd8f650.js" crossorigin="anonymous"></script>
+        <title>Traditional Game</title>
+        <link rel="icon" type="image/x-icon" href="../assets/homepage/icon.ico">
+    </head>
+    <body>
+        <!--Navigation Bar-->
+        <div class="firstPage container--full-view-port d-flex align-items-center justify-content-center" id="firstPage">
+            <ul class="nav align-self-baseline">
+                <li class="nav-item">
+                    <a class="nav-link navlogo" href="#">LOGO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">WORK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT ME</a>
+                </li>
+                <% if (loggedIn) { %>
+                    <li class="nav-item ms-auto navlast">
+                        <a class="nav-link" href="/home">LOGOUT</a>
+                    </li>
+                <% } 
+                    else { %>
+                    <li class="nav-item ms-auto">
+                        <a class="nav-link" href="#">SIGN UP</a>
+                    </li>
+                    <li class="nav-item navlast">
+                        <a class="nav-link" href="/login">LOGIN</a>
+                    </li>
+                    <% }
+                %>
+            </ul>
+            <!--First Page-->
+            <div class="container d-flex flex-column mainscreen">
+                <div><h1>PLAY TRADITIONAL GAME</h1></div>
+                <div><p>Experience new traditional gameplay<p></div>
+                <% if (loggedIn) { %>
+                    <form action="/game" method="get"><button class="btn playgame">PLAY NOW</button></form>
+                <% } %>
+                <% if (!loggedIn) { %>
+                    <form action="/game" method="get"><button class="btn playgame" disabled>PLAY NOW</button></form>
+                <% } %>
+            </div>
+            <div class="nextBtn">
+                <p>THE STORY</p>
+                <a href="#secondPage"><img src="../assets/homepage/scroll-down.svg"></a>
+            </div>
+        </div>
+
+
+        <!--Second Page-->
+        <div class="secondPage container--full-view-port d-flex justify-content-center align-items-center" id="secondPage">
+            <div class="headings">
+                <p>What's so special?</p>
+                <h1>THE GAMES</h1>
+            </div>
+            <div class="container--slider d-grid asd">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-1 btnLeft d-flex justify-content-center">
+                        <a href="#"><img src="../assets/homepage/switch-left.svg"></a>
+                    </div>
+                    <div class="col-10 d-flex container--overlay align-items-center justify-content-center">
+                        <img src="../assets/homepage/rockpaperstrategy-1600.jpg" class="img1">
+                        <div class="circles align-self-end">
+                            <img src="../assets/homepage/ellipse.svg" class="circle">
+                            <img src="../assets/homepage/ellipse-outline.svg" class="circle">
+                            <img src="../assets/homepage/ellipse-outline.svg" class="circle">
+                            <img src="../assets/homepage/ellipse-outline.svg" class="circle">
+                            <img src="../assets/homepage/ellipse-outline.svg" class="circle">
+                        </div>
+                    </div>
+                    <div class="col-1 btnRight d-flex justify-content-center">
+                        <a href="#"><img src="../assets/homepage/switch-right.svg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Third Page-->
+        <div class="thirdPage container--full-view-port d-flex flex-column justify-content-center" id="thirdPage">
+            <div class="container">
+                <p>What's so special?</p>
+                <h1>FEATURES</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body" id="card1-body">
+                                <img src="../assets/homepage/ellipse.svg">
+                                <h1>TRADITIONAL GAMES</h1>
+                                <p>If you miss your childhood, we provide many traditional games here</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="../assets/homepage/ellipse-outline.svg">
+                                <h1>GAME SUIT</h1>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="../assets/homepage/ellipse-outline.svg">
+                                <h1>TBD</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+
+        <!--Fourth Page-->
+        <div class="fourthPage container--full-view-port d-flex flex-column justify-content-center" id="fourthPage">
+            <div class="align-self-center"><h6>Can my computer run this game?</h6></div>
+            <div class="container headings d-flex flex-column">
+                <p>SYSTEM</p>
+                <p>REQUIREMENTS</p>
+            </div>
+            <br>
+            <div class="container d-grid sysReq justify-content-start">
+                <div class="row">
+                    <div class="col">
+                        <h2>OS:</h2>
+                        <p>Windows 7 64-bit only</p>
+                        <p>(No OSC support at this time)</p>
+                    </div>
+                    <div class="col">
+                        <h2>PROCESSOR:</h2>
+                        <p>Intel Core 2 Duo @ 2.4 GHZ or</p>
+                        <p>AMD Athlon X2 @ 2.8 GHZ</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h2>MEMORY:</h2>
+                        <p>4 GB RAM</p>
+                    </div>
+                    <div class="col">
+                        <h2>STORAGE:</h2>
+                        <p>8 GB available space</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h2>GRAPHICS:</h2>
+                        <p>NVIDIA GeForce GTX 660 2GB or</p>
+                        <p>AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Fifth Page-->
+        <div class="fifthPage container--full-view-port d-flex justify-content-center" id="fifthPage">
+            <div class="container d-flex flex-column justify-content-center">
+                <h1>TOP SCORES</h1>
+                <p>This top score from various games provided <span><br></span> on this platform</p>
+                <a href="#" class="btn playgame">see more</a>
+            </div>
+            <div class="container d-flex flex-column justify-content-center">
+                <div class="card align-self-end">
+                    <div class="card-body">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-2 pp"><img src="../assets/homepage/evan-lahti.jpg" alt="profile icon"></div>
+                            <div class="col">
+                                <div class="row-cols-auto">
+                                    <div class="col"><h2>Evan Lahti</h2></div>
+                                    <div class="col"><h3>PC Gamer</h3></div>
+                                </div>
+                            </div>
+                            <div class="col-1 twitterIcon"><img src="../assets/homepage/twitter-card.png"></div>
+                        </div>
+                        <p>"One of my gaming hightlights of the year."</p>
+                        <h6>October 18, 2018</h6>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-2 pp"><img src="../assets/homepage/jada-griffin.jpg" alt="profile icon"></div>
+                            <div class="col">
+                                <div class="row-cols-auto">
+                                    <div class="col"><h2>Jade Griffin</h2></div>
+                                    <div class="col"><h3>PC Gamer</h3></div>
+                                </div>
+                            </div>
+                            <div class="col-1 twitterIcon"><img src="../assets/homepage/twitter-card.png"></div>
+                        </div>
+                        <p>"The next big thing in the world of streaming and survival games."</p>
+                        <h6>December 21, 2018</h6>
+                    </div>
+                </div>
+                <div class="card align-self-end">
+                    <div class="card-body">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-2 pp"><img src="../assets/homepage/aaron-williams.jpg" alt="profile icon"></div>
+                            <div class="col">
+                                <div class="row-cols-auto">
+                                    <div class="col"><h2>Aaron Williams</h2></div>
+                                    <div class="col"><h3>Uproxx</h3></div>
+                                </div>
+                            </div>
+                            <div class="col-1 twitterIcon"><img src="../assets/homepage/twitter-card.png"></div>
+                        </div>
+                        <p>"Snoop Dogg Playing The Wildly Entertaining 'SOS' is Ridiculous."</p>
+                        <h6>December 24, 2018</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Sixth Page -->
+        <div class="sixthPage container--full-view-port d-flex flex-wrap align-items-center">
+            <div class="container--skull d-flex justify-content-center">
+                <img src="../assets/homepage/skull.png">
+            </div>
+            <div class="container d-flex flex-column">
+                <div class="container d-flex flex-column">
+                    <h2>Want to stay in <br>touch?</h2>
+                    <h1>NEWSLETTER <br> SUBSCRIBE</h1>
+                    <p>In order to start receiving our news, all you have to do is enter your email address. Everything else will be taken care of by us. We will send you emails containing information about game. We don't spam.</p>
+                </div>
+                <div class="container d-flex align-items-center">
+                    <form class="row d-flex align-items-start justify-content-center">
+                        <div class="col-auto form-floating">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com" value="youremail@binar.co.id">
+                            <label for="inputEmail">Your email address</label>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn playgame">Subscribe now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container--footNav d-flex align-items-center justify-content-end">
+                <ul class="nav endNav">
+                    <li class="nav-item ms-auto">
+                        <a class="nav-link" href="#firstPage">MAIN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#secondPage">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#thirdPage">GAME FEATURES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fourthPage">SYSTEM REQUIREMENTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fifthPage">QUOTES</a>
+                    </li>
+                    <li class="nav-item socialMedia ms-3">
+                        <a class="nav-link" href="#"><img src="../assets/homepage/facebook.svg"></a>
+                    </li>
+                    <li class="nav-item socialMedia">
+                        <a class="nav-link" href="#"><img src="../assets/homepage/twitter.svg"></a>
+                    </li>
+                    <li class="nav-item socialMedia">
+                        <a class="nav-link" href="#"><img src="../assets/homepage/vector.svg"></a>
+                    </li>
+                    <li class="nav-item socialMedia">
+                        <a class="nav-link" href="#"><img src="../assets/homepage/twitch.svg"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container--footer d-flex justify-content-end align-self-end">
+                <div class="me-auto">
+                    <p>&copy; 2018 Your Games, Inc. All Rights Reserved</p>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PRIVACY POLICY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"> | </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TERMS OF SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"> | </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CODE OF CONDUCT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
